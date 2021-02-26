@@ -10,5 +10,5 @@ echo "Enter the administrator password:" &&
 read adminPassword &&
 params='serverName='$serverName' administratorLogin='$adminUser' administratorLoginPassword='$adminPassword &&
 az group create --name $resourceGroupName --location $location &&
-az deployment group create --resource-group $resourceGroupName --parameters $params --template-uri  &&
+az deployment group create --resource-group $resourceGroupName --parameters $params --template-file azure_mysql.json &&
 echo "Press [ENTER] to continue ..."
